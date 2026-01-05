@@ -1,1 +1,3 @@
-return {}
+return {
+  require("configs.snacks")
+}
