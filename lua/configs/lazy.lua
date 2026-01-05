@@ -44,4 +44,9 @@ return {
       },
     },
   },
+
+  change_detection = {
+    enabled = true,
+    notify = true
+  },
 }
