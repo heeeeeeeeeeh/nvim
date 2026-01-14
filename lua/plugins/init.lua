@@ -1,17 +1,8 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
-  },
+  require("configs.conform"),
 
   -- These are some examples, uncomment them if you want to see them work!
-  {
-    "neovim/nvim-lspconfig",
-    opts = function()
-      require "configs.lspconfig"
-    end,
-  },
+  require("configs.lspconfig")
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
