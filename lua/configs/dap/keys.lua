@@ -1,3 +1,11 @@
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "lua",
+  callback = function()
+    vim.keymap.set("n", "<leader>dl", function()
+      require("osv").launch { port = 8086 }
+    end, { noremap = true })
+  end,
+})
 return {
   { "nb", "<cmd>DapToggleBreakpoint<cr>", { noremap = true, desc = "Toggle Breakpoint" } },
   { "nc", "<cmd>DapContinue<cr>", { noremap = true, desc = "DAP continue or start" } },
